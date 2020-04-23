@@ -1,0 +1,2 @@
+class Deleted < ApplicationRecord
+end

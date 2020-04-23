@@ -1,0 +1,17 @@
+<%= form_with(model: deleted, local: true) do |form| %>
+  <% if deleted.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(deleted.errors.count, "error") %> prohibited this deleted from being saved:</h2>
+
+      <ul>
+      <% deleted.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
